@@ -1,0 +1,12 @@
+- In "Utilità e Pianificazione" in Windows sono definiti due task che si occupano dello script python "automate". Il primo è FreePBX-CallsCheck, è programmato per lanciare lo script ogni giorno alle 
+9:30 di mattina, dal Lunedì al Venerdì. Il secondo task chiamato "Stop-FreePBX" si occupa di interrompere l'attività precedente alle ore 18. Entrambi i task hanno quindi programmazione giornaliera
+e solo in giorni lavorativi.
+- In questa cartella è presente un file .bat che si chiama "FreePBX-Calls-Checker". Tale file è lanciato dall'attività "FreePBX-CallsCheck". Con doppio click lo si esegue e questo porterà
+all'esecuzione manuale dello scipt python. Se lo si volesse modificare sarà sufficiente aprire NotePad e aprire quel file. Al suo interno troverete quanto segue:
+
+python "C:\Users\produceict\Desktop\Python-FreePBX\automate.py"
+pause
+
+Se si volesse cambiare il file lanciato da quell'attività basterà modificare i comandi inseriti nel file.
+
+- Se lo script sta andando evitare di chiudere la finestra cmd che ha aperto altrimenti si andrebbe a terminare il processo creato
